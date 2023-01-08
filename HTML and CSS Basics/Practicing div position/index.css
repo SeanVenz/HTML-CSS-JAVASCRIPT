@@ -1,0 +1,37 @@
+.hello{
+    text-align: center;
+}
+
+.leftbox{
+    display: inline-block;
+    width: 33%;
+    height: 500px;
+    background: blue;
+    margin-left: 17%;
+    border-style: solid;
+}
+
+.rightbox{
+    display: inline-block;
+    width: 33%;
+    height: 500px;
+    background: red;
+    border-style: solid;
+    padding: 0;
+}
+
+.bottombox{
+    display: inline-block;
+    width: 66%;
+    height: 500px;
+    margin-left: 17%;
+    border-style: solid;
+    background: green;
+}
+
+.navbar{
+    display: inline-block;
+    width: 99.5%;
+    height: 50px;
+    background: yellow;
+}

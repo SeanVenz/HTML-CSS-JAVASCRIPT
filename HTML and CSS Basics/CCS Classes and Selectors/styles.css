@@ -1,0 +1,57 @@
+/* p.error{
+    color: red;
+    font-weight: bold;
+}
+
+div .error{
+    color:blue;
+}
+
+p.success{
+    color:green
+}
+
+p.success.feedback{
+    color:gold;
+    border: dashed 2px black;
+}
+
+#content{
+    background-color: #ebebeb;
+    padding: 20px;
+}
+ */
+
+ /* div p{
+    color: purple;
+ } */
+
+ /* div .error{
+    color:blue;
+ } */
+
+ /* a[href*= "google"]{
+    color: #3d3d3d;
+    font-weight: 600;
+    background-color: beige;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+ } */
+
+ div{
+    color: red;
+    border: solid 1px grey;
+    margin: 40px;
+    font-weight: bold;
+ }
+
+ div p{
+    border: inherit;
+    margin: inherit;
+    color: crimson;
+ }
+
+ p{
+    color:orange
+ }
