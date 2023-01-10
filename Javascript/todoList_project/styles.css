@@ -1,0 +1,33 @@
+body{
+    background: #7a70b9;
+}
+
+.container{
+    max-width: 400px;
+}
+
+input[type=text],
+input[type=text]:focus{
+    color: #fff;
+    border:none;
+    background: rgba(0,0,0,0.2);
+    max-width: 400px;
+}
+.todos li{
+    background: #7a6cc7;
+}
+.delete{
+    cursor: pointer;
+}
+.search-input{
+    color: white;
+}
+
+.searches{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+.to-do{
+    display: inline-block;
+}
