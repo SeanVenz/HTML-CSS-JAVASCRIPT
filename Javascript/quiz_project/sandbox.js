@@ -1,7 +1,6 @@
 //default answers
 const correctAnswers =['A', 'A', 'A', 'A', 'A'];
 const form = document.querySelector('.quiz-form');
-const finalScore = document.querySelector('.result');
 const result = document.querySelector('.result');
 
 // setTimeout(() => {
