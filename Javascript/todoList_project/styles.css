@@ -31,3 +31,7 @@ input[type=text]:focus{
 .to-do{
     display: inline-block;
 }
+
+.filtered{
+    display: none !important;
+}
