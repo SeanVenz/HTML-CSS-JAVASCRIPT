@@ -19,7 +19,7 @@ addForm.addEventListener('submit', (e) => {
     //get value from input form and trim it so there is no white space
     const todo = addForm.add.value.trim();
 
-    //check if there is a value in the input form
+    //check if there is a value in the input form   
     if(todo.trim().length > 0){
         generateTemplate(todo);
         addForm.reset();
