@@ -27,23 +27,36 @@ class Chatroom{
 
     //set real time listener everytime there is change in db
     getChats(callback){
-        this.chats.onSnapshot((snapshot) => {
-            snapshot.docChanges().forEach((change) => {
-                if(change.type === 'added'){
-                    //update the UI
-                }
+        this.chats
+            //get documents from a certain collection where a certain condition is true. eg. genereal, gaming
+            .where('room', '==', this.room)
+
+            //order the created at to output latest
+            .orderBy('created_at')
+            
+            //listen to changes in firebase
+            .onSnapshot(snapshot => {
+                snapshot.docChanges().forEach(change => {
+                  if(change.type === 'added'){
+                    //update ui for each change 
+                    callback(change.doc.data());
+                  }
+                });
             });
-        });
     }
 
 }
 
-const chatroom = new Chatroom('gaming', 'ssean');
+const chatroom = new Chatroom('gen', 'tae');
 
-chatroom.addChat('hi guys')
+chatroom.addChat('gg')
     .then(() => {
         console.log('chat added'); 
     })
     .catch((error) => {
         console.log(error);
     })
+
+chatroom.getChats((data) => {
+    console.log(data);
+})
