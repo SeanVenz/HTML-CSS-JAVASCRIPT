@@ -1,9 +1,12 @@
 //create class
 class Chatroom{
+    //constructor needed for the chatroom
     constructor(room, username){
         this.room = room;
         this.username = username;
         this.chats = db.collection('chats');
+        //unsubscribe from previous snapshot in order to update to another room
+        this.unsub;
     }
     //add chat documents
     async addChat(message){
@@ -27,7 +30,7 @@ class Chatroom{
 
     //set real time listener everytime there is change in db
     getChats(callback){
-        this.chats
+        this.unsub = this.chats
             //get documents from a certain collection where a certain condition is true. eg. genereal, gaming
             .where('room', '==', this.room)
 
@@ -45,18 +48,16 @@ class Chatroom{
             });
     }
 
+    updateName(username){
+        this.username = username;
+    }
+
+    updateRoom(room){
+        this.room = room;
+        //unsub stops listening from snapshots from the other room, if it has value, stop listening
+        if(this.unsub()){
+            this.unsub();   
+        }
+        
+    }
 }
-
-const chatroom = new Chatroom('gen', 'tae');
-
-chatroom.addChat('gg')
-    .then(() => {
-        console.log('chat added'); 
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-
-chatroom.getChats((data) => {
-    console.log(data);
-})
