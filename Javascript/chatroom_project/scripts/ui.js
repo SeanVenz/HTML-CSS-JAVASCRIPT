@@ -6,6 +6,11 @@ class ChatUi{
     constructor(list){
         this.list = list;
     }
+    //clear the list for the other rooms data to be put
+    clear(){
+        this.list.innerHTML = '';
+    }
+
     render(data){
         //set date using a library
         const when = dateFns.distanceInWordsToNow(
