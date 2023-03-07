@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("dom file");const e=document.querySelector("body");console.log("index file"),(o=>{const n=document.createElement("h1");n.textContent="hekhok",e.appendChild(n)})(),e.style.background="peachpuff",[{name:"sean",premium:!0},{name:"tae",premium:!0},{name:"gg",premium:!1}].forEach((e=>{console.log(e.name,e.premium)})),console.log("asdasdasdasd")})();
